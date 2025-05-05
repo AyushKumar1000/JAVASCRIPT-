@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Password Prompt</title>
+  <script>
+    function checkPassword(event) {
+      
+      let password = prompt("Enter password:");
+      if (password === "1234") {
+        alert("Correct password");
+      } else {
+        alert("Incorrect password");
+      }
+    }
+  </script>
+</head>
+<body>
+  <form onsubmit="checkPassword(event)">
+    <label for="authen">Enter your number:</label>
+    <input type="text" id="authen" placeholder="Enter your number" required>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
