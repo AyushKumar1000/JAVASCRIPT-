@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find String in Array</title>
+</head>
+<body>
+    <script>
+        let arr = ["hello", "world", "hi", "bye"];
+        let str = prompt("Enter a string:");
+        function findstring(){
+            for (let x of arr) {
+                if (x == str) {
+                    alert("True");
+                    break;
+                } else {
+                    alert("False");
+                }
+            }
+        }
+        findstring();
+    </script>
+</body>
+</html>
