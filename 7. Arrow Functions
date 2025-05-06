@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arrow Functions</title>
+</head>
+<body>
+    <script>
+        const func = () => console.log("hello");
+        func();
+
+        const func2 = () => {
+            const g = 8;
+            const h = 9;
+            return g + h;
+        };
+        func2();
+    </script>
+</body>
+</html>
