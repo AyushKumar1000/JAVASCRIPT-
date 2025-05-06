@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Methods</title>
+</head>
+<body>
+    <script>
+        let arr = [1, 2, 3, 4, 5];
+
+        console.log("forEach:");
+        arr.forEach(el => console.log(el * 2));
+
+        let mapped = arr.map(n => n * 3);
+        console.log("map:", mapped);
+
+        let filtered = arr.filter(n => n % 2 === 0);
+        console.log("filter:", filtered);
+
+        let sum = arr.reduce((acc, curr) => acc + curr, 0);
+        console.log("reduce:", sum);
+
+        let found = arr.find(n => n > 3);
+        console.log("find:", found);
+
+        let findIndex = arr.findIndex(n => n === 3);
+        console.log("findIndex:", findIndex);
+
+        console.log("every:", arr.every(n => n > 0));
+        console.log("some:", arr.some(n => n > 4));
+    </script>
+</body>
+</html>
