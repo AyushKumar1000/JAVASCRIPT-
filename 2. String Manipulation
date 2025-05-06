@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Manipulation</title>
+</head>
+<body>
+    <script>
+        let str = "Hello, World!";
+        console.log(str.length);
+        console.log('"' + str + '"');
+        console.log(str.toUpperCase());
+        console.log(str.toLowerCase());
+        console.log(str.charAt(0));
+        console.log(str.length);
+        console.log(str.indexOf("World"));
+        console.log(str.substring(0, 5));
+        console.log(str.slice(0, 5));
+        console.log(str.split(","));
+        console.log(str.replace("World", "JavaScript"));
+        console.log(str.at(0));
+        console.log(str.search("World"));
+    </script>
+</body>
+</html>
