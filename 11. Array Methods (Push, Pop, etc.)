@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Methods</title>
+</head>
+<body>
+    <script>
+        let arr = [1, 2, 3, 4, 5];
+
+        console.log(arr.length);
+        console.log(arr.push);
+        console.log(arr.pop());
+        console.log(arr.shift());
+        console.log(arr.unshift());
+        console.log(arr.slice(0, 2));
+        console.log(arr.splice(0, 2));
+        console.log(arr.flat());
+    </script>
+</body>
+</html>
