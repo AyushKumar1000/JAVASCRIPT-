@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Comparison</title>
+</head>
+<body>
+    <script>
+        function stri () {
+            let x = prompt("Enter a string:");
+            let y = prompt("Enter a string:");
+
+            if (x == y) {
+                console.log("True");
+            } else {
+                console.log("False");
+            }
+        }
+
+        stri();
+    </script>
+</body>
+</html>
