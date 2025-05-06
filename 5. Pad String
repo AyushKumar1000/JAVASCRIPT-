@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pad String</title>
+</head>
+<body>
+    <script>
+        let str = "5";
+        let padded = str.padStart(5, "*");
+        let padded2 = str.padEnd(5, "*");
+        console.log(padded); 
+        console.log(padded2);
+    </script>
+</body>
+</html>
