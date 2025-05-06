@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo Functions</title>
+</head>
+<body>
+    <script>
+        function demo(num1 ,num2,num3){
+            let str = " thi the  classroom";
+            console.log(num1);
+        }
+
+        demo(5, 6);
+
+        function demo(...num1){
+            let str = " thi the  classroom";
+            console.log(num1);
+        }
+    </script>
+</body>
+</html>
