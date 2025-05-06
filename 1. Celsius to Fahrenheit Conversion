@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Celsius to Fahrenheit</title>
+</head>
+<body>
+    <script>
+        function celsiustofahrenheit(celsius) {
+            return (celsius * 9 / 5) + 32;
+        }
+
+        let celsius = prompt("Enter temperature in Celsius:");
+        console.log(`${celsius}C is equal to ${celsiustofahrenheit(celsius)}F`);
+    </script>
+</body>
+</html>
