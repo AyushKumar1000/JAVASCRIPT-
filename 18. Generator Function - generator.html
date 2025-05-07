@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generator Function</title>
+</head>
+<body>
+    <script>
+        function* sate() {
+            console.log("Hello");
+            yield 1;
+
+            console.log("World");
+            yield 2;
+
+            console.log("YES");
+        }
+
+        const g = sate();
+        console.log(g.next());
+        console.log(g.next());
+        console.log(g.next());
+    </script>
+</body>
+</html>
