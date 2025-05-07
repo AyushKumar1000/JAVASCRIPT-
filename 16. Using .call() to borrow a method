@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Call Method Example</title>
+</head>
+<body>
+    <script>
+        const person1 = {
+            name: "Ayush Kumar",
+            age: 18,
+            city: "New Delhi"
+        };
+
+        const person = {
+            pname: function () {
+                console.log(this.name + " " + this.age + " " + this.city);
+                return this.age;
+            }
+        };
+
+        person.pname.call(person1);
+    </script>
+</body>
+</html>
