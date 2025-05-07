@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pattern Print</title>
+</head>
+<body>
+    <script>
+        function patt() {
+            let n = "";
+            for (let i = 1; i <= 6; i++) {
+                for (let j = 1; j <= i; j++) {
+                    n += "*";
+                }
+                n += "\n";
+            }
+            console.log(n);
+        }
+        patt();
+    </script>
+</body>
+</html>
