@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Async Function Return</title>
+</head>
+<body>
+    <script>
+        async function myFunction() {
+            return 8 + 2;
+        }
+
+        myFunction().then(
+            function (value) { console.log(value); },
+            function (error) { console.log(error); }
+        );
+    </script>
+</body>
+</html>
