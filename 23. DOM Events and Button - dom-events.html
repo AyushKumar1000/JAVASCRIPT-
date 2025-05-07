@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Button</title>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+        const button = document.createElement("button");
+        button.innerText = "Click Me";
+        button.onclick = function () {
+            alert("Button clicked!");
+        };
+
+        document.getElementById("container").appendChild(button);
+    </script>
+</body>
+</html>
