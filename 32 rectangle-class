@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rectangle Class</title>
+</head>
+<body>
+  <h1>Rectangle Class</h1>
+  <script>
+    class Rectangle {
+      constructor() {
+        this.length = 20;
+        this.width = 40;
+      }
+
+      area() {
+        return this.length * this.width;
+      }
+
+      perimeter() {
+        return 2 * (this.length + this.width);
+      }
+    }
+
+    const calculate = new Rectangle();
+    console.log("Area: ", calculate.area());
+    console.log("Perimeter: ", calculate.perimeter());
+  </script>
+</body>
+</html>
