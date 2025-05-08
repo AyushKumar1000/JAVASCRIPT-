@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Car Class</title>
+</head>
+<body>
+  <h1>Car Class</h1>
+  <script>
+    class MarutiSuzuki {
+      constructor(Name, Modelno, DOM, price) {
+        this.Name = Name;
+        this.Modelno = Modelno;
+        this.DOM = DOM;
+        this.price = price;
+      }
+    }
+
+    const car1 = new MarutiSuzuki("Swift", "XZ123", "2023-08-01", 750000);
+    console.log(`Name: ${car1.Name}, Model Number: ${car1.Modelno}, Date of Manufacture: ${car1.DOM}, Price: ₹${car1.price}`);
+
+    const car2 = new MarutiSuzuki("Balano", "X124", "2024-08-02", 1000000);
+    console.log(`Name: ${car2.Name}, Model Number: ${car2.Modelno}, Date of Manufacture: ${car2.DOM}, Price: ₹${car2.price}`);
+  </script>
+</body>
+</html>
