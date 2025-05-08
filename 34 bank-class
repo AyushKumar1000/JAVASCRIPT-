@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bank Class</title>
+</head>
+<body>
+  <h1>Bank Class</h1>
+  <script>
+    class Bank {
+      constructor(banknames, Branches) {
+        this.banknames = banknames;
+        this.Branches = Branches;
+      }
+
+      addBranch(Branch) {
+        this.Branches.push(Branch);
+      }
+
+      removeBranch(Branch) {
+        this.Branches.pop(Branch);
+      }
+
+      displayBranch() {
+        return this.Branches;
+      }
+    }
+
+    const brname = new Bank("Bank1", ["Main Branch", "West Side"]);
+    brname.addBranch("East Side");
+    brname.removeBranch("West Side");
+    console.log(brname.displayBranch());
+  </script>
+</body>
+</html>
