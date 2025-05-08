@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Procedure Oriented Programming</title>
+</head>
+<body>
+  <h1>Procedure Oriented Programming</h1>
+  <script>
+    function person(fname, lname) {
+      let firstname = fname;
+      let lastname = lname;
+
+      let getDetails_noaccess = function () {
+        return (`First name is: ${firstname} Last name is: ${lastname}`);
+      };
+
+      this.getDetails_access = function () {
+        return (`First Name is: ${firstname}, Last name is: ${lastname}`);
+      };
+    }
+
+    let person1 = new person("Ayush", "Kumar");
+    console.log(person1.getDetails_access());
+  </script>
+</body>
+</html>
