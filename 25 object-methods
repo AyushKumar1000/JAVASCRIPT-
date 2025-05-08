@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Object with Methods</title>
+</head>
+<body>
+  <h1>Object with Methods</h1>
+  <script>
+    const person = {
+      firstName: "Ayush",
+      lastName: "Kumar",
+      age: 18,
+
+      printFullName: function() {
+        console.log(this.firstName + " " + this.lastName);
+      },
+
+      printAge: function() {
+        console.log("Age:", this.age);
+      }
+    };
+
+    person.printFullName();
+    person.printAge();
+  </script>
+</body>
+</html>
