@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Convert Time to Seconds</title>
+</head>
+<body>
+  <h1>Convert Time to Seconds</h1>
+  <script>
+    function timeconvertionintosec() {
+      let min = prompt("Enter the time in minutes");
+      let hours = prompt("Enter the time in hours");
+      console.log("Time in seconds is: " + ((min * 60) + (hours * 3600)));
+    }
+
+    timeconvertionintosec();
+  </script>
+</body>
+</html>
