@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Class Inheritance</title>
+</head>
+<body>
+  <h1>Class Inheritance</h1>
+  <script>
+    class person {
+      constructor(Name) {
+        this.Name = Name;
+      }
+    }
+
+    class doctor extends person {
+      constructor(Role) {
+        super(); // Calls the parent class constructor
+        this.Role = Role;
+      }
+    }
+
+    class engineer extends person {
+      constructor(Branch) {
+        super(); // Calls the parent class constructor
+        this.Branch = Branch;
+      }
+    }
+
+    const doc1 = new doctor("Doctor");
+    doc1.Name = "Dr. Smith";
+    console.log(doc1.Name, doc1.Role);
+
+    const eng1 = new engineer("Engineer");
+    eng1.Name = "John";
+    console.log(eng1.Name, eng1.Branch);
+  </script>
+</body>
+</html>
