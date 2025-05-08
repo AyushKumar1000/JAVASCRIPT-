@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Car Inheritance</title>
+</head>
+<body>
+  <h1>Car Inheritance</h1>
+  <script>
+    class Car {
+      constructor(brand) {
+        this.carname = brand;
+      }
+      present() {
+        return `I have a ${this.carname}`;
+      }
+    }
+
+    class Model extends Car {
+      constructor(brand, mod, func) {
+        super(brand);
+        this.Model = mod;
+        this.func = func;
+      }
+
+      show() {
+        return `${this.present()}, it is a ${this.Model}`;
+      }
+    }
+
+    const func = () => {
+      console.log("car");
+    };
+
+    const myCar = new Model("Ford", "Mustang", func);
+    console.log(myCar.show());
+  </script>
+</body>
+</html>
