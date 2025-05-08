@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Constructor Function Example</title>
+</head>
+<body>
+  <h1>Constructor Function Example</h1>
+  <script>
+    function person(name, age, address) {
+      this.name = name;
+      this.age = age;
+      this.address = address;
+      this.pname = function () {
+        console.log("hello");
+      };
+    }
+
+    const person1 = new person("Ayush", 18, "Delhi");
+    person1.gender = "male";
+    console.log(person1.gender);
+
+    person.prototype.gender = "Male";
+    console.log(person1);
+  </script>
+</body>
+</html>
