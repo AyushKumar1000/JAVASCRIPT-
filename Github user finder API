@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Github Search</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-size: 16px;
+      margin-right: 10px;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #2b3137;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #444c56;
+    }
+
+    #output {
+      margin-top: 30px;
+      text-align: center;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+
+    #output img {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <h1>GitHub Profile Search</h1>
+    <label for="username">Enter your GitHub profile:</label>
+    <input type="text" id="username" name="user"><br>
+    <button onclick="handleSearch()">Search</button>
+  </div>
+
+  <div id="output"></div>
+
+  <script>
+    async function handleSearch() {
+      const user = document.getElementById('username').value.trim();
+      const output = document.getElementById('output');
+
+      if (!user) {
+        output.innerHTML = `<p style="color:red;">Please enter a GitHub username.</p>`;
+        return;
+      }
+
+      const url = `https://github-profiles-trending-developers-repositories-scrapping.p.rapidapi.com/profiles?profileUrl=https://github.com/${user}`;
+      const options = {
+        method: 'GET',
+        headers: {
+          'x-rapidapi-key': '346d57df26mshe38743c4c9794f5p1fa1a2jsn1aa10150e71c',
+          'x-rapidapi-host': 'github-profiles-trending-developers-repositories-scrapping.p.rapidapi.com'
+        }
+      };
+
+      try {
+        const response = await fetch(url, options);
+        const data = await response.json();
+        const profile = Array.isArray(data) ? data[0] : data;
+
+        if (profile && profile.profileName && profile.avatar) {
+          output.innerHTML = `
+            <img src="${profile.avatar}" alt="Avatar" style="border: 2px solid black; border-radius: 50%; width: 120px;">
+            <h2>${profile.profileName}</h2>
+            <p><strong>Commits:</strong> ${profile.totalCommits || 'Not available'}</p>
+          `;
+        } else {
+          output.innerHTML = `<p style="color:red;">Profile not found or incomplete data.</p>`;
+        }
+      } catch (error) {
+        output.innerHTML = `<p style="color:red;">Error fetching data: ${error.message}</p>`;
+      }
+    }
+  </script>
+
+</body>
+</html>
