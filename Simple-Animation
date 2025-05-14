@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Border Box</title>
+  <style>
+    .main-container {
+      border: 10px ridge blue;
+      border-radius: 10px;
+      margin: 100px 100px;
+      height: 70px;
+      width: 200px;
+      animation: borderAnimation 8s infinite;
+      
+    }
+
+    @keyframes borderAnimation {
+      0% {
+        border-color: red;
+        border-style: inset;
+      }
+      10%{
+        border-color: blueviolet;
+        border-style: inset;
+      }
+      20% {
+        border-color: orange;
+        border-style: groove;
+      }
+      30% {
+        border-color: yellow;
+        border-style: outset;
+      }
+      40% {
+        border-color: green;
+        border-style: ridge;
+      }
+      50% {
+        border-color: turquoise;
+        border-style: solid;
+      }
+      60% {
+        border-color: blue;
+        border-style: dashed;
+      }
+      70% {
+        border-color: indigo;
+        border-style: dotted;
+      }
+      80% {
+        border-color: violet;
+        border-style: double;
+      }
+      90% {
+        border-color: pink;
+        border-style: groove;
+      }
+      100% {
+        border-color: red;
+        border-style: inset;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <h1>Content</h1>
+  </div>
+</body>
+</html>
