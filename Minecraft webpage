@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Minecraft</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bytesized&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    .image-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .msg {
+      font-family: "Bytesized", sans-serif;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+      text-shadow: 1px 1px 4px black;
+    }
+
+    .msg h1 {
+      margin: 0 0 15px;
+      font-size: 40px;
+    }
+
+    .msg button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #c70101;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .msg button:hover {
+      background-color: #a00000;
+    }
+  </style>
+</head>
+<body>
+  <div class="image-container">
+    <img src="TheArrival_1170x500.jpeg" alt="Minecraft Image">
+    <div class="msg">
+      <h1>"Endless possibilities"</h1>
+      <button>Learn More</button>
+    </div>
+  </div>
+</body>
+</html>
