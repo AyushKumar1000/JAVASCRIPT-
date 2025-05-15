@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flex Block</title>
+
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .position-relative {
+      border: 2px solid red;
+      width: 200px;
+      height: 200px;
+      background: red;
+      overflow: auto;
+      margin-top: 20px;
+    }
+
+    .relative-box {
+      border: 2px solid blue;
+      width: 300px;
+      height: 300px;
+      background: aqua;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div>Ayush</div>
+    <div>Kumar</div>
+    <button>Submit</button>
+  </div>
+
+  <div class="position-relative">
+    <div class="relative-box"></div>
+  </div>
+</body>
+</html>
