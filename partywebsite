@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tech Party Invitation</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('stock-vector-abstract-waving-particle-technology-background-design-abstract-wave-moving-dots-flow-particles-hi-2128959116.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: rgba(18, 18, 18, 0.85);
+      color: #ffffff;
+      border: 2px solid #00fff0;
+      border-radius: 15px;
+      padding: 2rem;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 0 20px #00fff0;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    h1 {
+      color: #00fff0;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+      line-height: 1.5;
+    }
+
+    .highlight {
+      color: #00fff0;
+      font-weight: bold;
+    }
+
+    .features {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .feature {
+      width: 80px;
+      text-align: center;
+    }
+
+    .feature img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature p {
+      margin: 0;
+      font-size: 0.85rem;
+    }
+
+    .footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #cccccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Tech Party 2025</h1>
+    <p>You're invited to the most electrifying</p>
+    <p class="highlight">Neon Circuit Night!</p>
+    <p>Date: <span class="highlight">July 20, 2025</span></p>
+    <p>Time: <span class="highlight">7:00 PM till late</span></p>
+    <p>Venue: <span class="highlight">The Grid Club, Silicon Street</span></p>
+
+    <div class="features">
+      <div class="feature">
+        <img src="https://img.icons8.com/ios-filled/50/00fff0/dj.png" alt="Live DJ" />
+        <p>Live DJ</p>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/ios-filled/50/00fff0/virtual-reality.png" alt="VR Games" />
+        <p>VR Games</p>
+      </div>
+      <div class="feature">
+        <img src="https://i0.wp.com/bookextraordinary.com/wp-content/uploads/2023/01/dance-floor-rental-washington-d.c..jpeg" alt="LED Dance Floor" />
+        <p>Dance Floor</p>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/ios-filled/50/00fff0/hologram.png" alt="Hologram Show" />
+        <p>Hologram</p>
+      </div>
+    </div>
+
+    <p>Dress Code: <span class="highlight">Glow / Futuristic</span></p>
+    <div class="footer">
+      RSVP by July 10 · Contact: <a href="mailto:party@techhub.com" style="color:#00fff0;">party@techhub.com</a>
+    </div>
+  </div>
+</body>
+</html>
