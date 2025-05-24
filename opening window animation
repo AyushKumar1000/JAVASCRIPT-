@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Opening Window Animation</title>
+  <style>
+    body {
+      background: #87ceeb;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .window-frame {
+      width: 300px;
+      height: 200px;
+      position: relative;
+      border: 10px solid #654321;
+      background: #fff;
+      box-sizing: border-box;
+      overflow: hidden;
+      display: flex;
+    }
+
+    .shutter {
+      width: 50%;
+      height: 100%;
+      background: #8b4513;
+      position: absolute;
+      top: 0;
+      transform-origin: center left;
+      transition: transform 1s ease;
+    }
+
+    .shutter.right {
+      left: 50%;
+      transform-origin: center right;
+    }
+
+    .open .left {
+      transform: rotateY(-100deg);
+    }
+
+    .open .right {
+      transform: rotateY(100deg);
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="window-frame" id="window">
+    <div class="shutter left"></div>
+    <div class="shutter right"></div>
+  </div>
+
+  <button onclick="openWindow()">Open Window</button>
+
+  <script>
+    function openWindow() {
+      document.getElementById('window').classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>
