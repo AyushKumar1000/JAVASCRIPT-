@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <input id="numberInput" type="number" placeholder="Enter a number">
+  <button onclick="generateLorem()">Generate</button>
+  <p id="result"></p>
+
+  <script>
+  
+    const loremArray = Array(50).fill(
+        "Lorem", "ipsum,", "dolor", "sit", "amet", "consectetur", "adipisicing", "elit.", "Excepturi", "quas", "explicabo", "sapiente", "itaque", "qui?", "Beatae", "eaque", "jure", "voluptatum", "aliquam", "quam", "reprehenderit", "voluptate,", "consequuntur", "omnis", "quae", "sit", "ratione.", "Porro", "repudiandae", "ex,", "vel,", "facilis", "praesentium", "optio", "excepturi", "asperiores", "eligendi", "explicabo", "voluptatum", "soluta", "aliquid", "provident", "reprehenderit,", "aspernatur", "quam", "rem", "mollitia", "et", "quo", "rerum", "dignissimos?", "Distinctio", "consectetur", "non", "sunt.", "Tempore", "adipisci", "qui", "voluptates", "illum", "reprehenderit,", "nemo", "obcaecati", "omnis", "unde", "officiis", "praesentium.", "Enim", "omnis", "rerum", "jure", "corrupti", "voluptatibus", "accusamus", "non", "repellat", "odio", "vero", "perspiciatis,", "quis", "harum", "saepe,", "itaque", "molestiae", "aliquid", "provident,", "et", "aliquam", "dolorem", "praesentium", "adipisci", "quaerat", "quisquam", "sed", "excepturi!", "Placeat", "impedit", "maxime", "aspernatur", "deserunt!"
+    );
+
+    function generateLorem() {
+
+      const count = document.getElementById("numberInput").value;
+
+    
+      const timesToRepeat = Math.ceil(count / 50); 
+      const fullArray = [].concat(...Array(timesToRepeat).fill(loremArray)); 
+
+    
+      const result = fullArray.slice(0, count);
+
+
+      document.getElementById("result").innerText = result.join(" ");
+    }
+  </script>
+
+</body>
+</html>
