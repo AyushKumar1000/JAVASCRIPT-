@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Random Color Generator</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f0f0f0;
+    }
+
+    #color-box {
+      width: 150px;
+      height: 150px;
+      margin: 20px auto;
+      border-radius: 10px;
+      border: 2px solid #ccc;
+    }
+
+    #color-code {
+      font-size: 24px; 
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Random Color Code Generator</h1>
+  <div id="color-box"></div>
+  <p id="color-code">#FFFFFF</p>
+  <button onclick="generateColor()">Generate Color</button>
+
+  <script>
+
+  const usedColors = new Set();
+
+  function generateColor() {
+    if (usedColors.size === 16777215) {
+      alert("All possible colors have been used!");
+      return;
+    }
+
+    let randomColor;
+    do {
+      randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+    } while (usedColors.has(randomColor));
+
+    usedColors.add(randomColor);
+    document.getElementById("color-box").style.backgroundColor = randomColor;
+    document.getElementById("color-code").textContent = randomColor;
+  }
+
+
+
+  </script>
+
+</body>
+</html>
